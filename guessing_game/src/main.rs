@@ -17,8 +17,10 @@ fn main() {
         io::stdin().read_line(&mut guess)
             .expect("Failed to read line");
 
-        let guess: u32 = guess.trim().parse()
-            .expect("Not a number");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
 
         match not_so_secret.cmp(&guess) {
             Ordering::Less => println!("It's less"),
