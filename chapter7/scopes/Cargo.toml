@@ -1,0 +1,6 @@
+[package]
+name = "scopes"
+version = "0.1.0"
+authors = ["Thomas Sauvajon <thomas.sauvajon.dev@gmail.com>"]
+
+[dependencies]
